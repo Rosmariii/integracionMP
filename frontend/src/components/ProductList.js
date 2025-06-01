@@ -21,7 +21,8 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://192.168.1.6:3001/api/products');
+            const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001'; // Default for local dev
+            const response = await fetch(`${apiUrl}/api/products`);
             const data = await response.json();
             setProducts(data);
         } catch (error) {
@@ -42,7 +43,7 @@ const ProductList = () => {
         try {
             setLoading(true);
             // Crea preferencia solo si aún no la creamos para este producto
-            const response = await fetch('http://192.168.1.6:3001/api/create-preference', {
+            const response = await fetch(`${apiUrl}/api/create-preference`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
