@@ -7,6 +7,7 @@ import TransferForm from './TransferForm';
 import './TransferForm.css';
 
 const ProductList = () => {
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001'; // Default for local dev
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
