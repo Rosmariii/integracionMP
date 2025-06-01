@@ -38,7 +38,8 @@ app.post('/api/create-preference', async (req, res) => {
         });
       }
 
-      const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000'; // Default for local dev
+      // Remove trailing slash if present to avoid double slashes in back_urls
+const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, ''); // Default for local dev
   
       const preferenceData = {
         items: items.map(item => ({
