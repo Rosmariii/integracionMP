@@ -40,6 +40,7 @@ app.post('/api/create-preference', async (req, res) => {
 
       // Remove trailing slash if present to avoid double slashes in back_urls
 const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, ''); // Default for local dev
+console.log('frontendUrl:', frontendUrl);
   
       const preferenceData = {
         items: items.map(item => ({
