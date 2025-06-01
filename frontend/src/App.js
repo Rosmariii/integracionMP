@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductList';
-import PaymentResult from './components/PaymentResult';
 import SuccessPage from './components/SuccessPage';
 import FailurePage from './components/FailurePage';
 import PendingPage from './components/PendingPage';
