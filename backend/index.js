@@ -37,6 +37,8 @@ app.post('/api/create-preference', async (req, res) => {
           details: 'Se requiere al menos un producto para crear la preferencia'
         });
       }
+
+      const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:3000'; // Default for local dev
   
       const preferenceData = {
         items: items.map(item => ({
@@ -52,9 +54,9 @@ app.post('/api/create-preference', async (req, res) => {
           email: 'cliente@ejemplo.com'
         },
         back_urls: {
-          success: 'http://localhost:3000/success',
-          failure: 'http://localhost:3000/failure',
-          pending: 'http://localhost:3000/pending'
+          success: `${frontendUrl}/success`,
+          failure: `${frontendUrl}/failure`,
+          pending: `${frontendUrl}/pending`
         },
         external_reference: `order_${Date.now()}`
       };
