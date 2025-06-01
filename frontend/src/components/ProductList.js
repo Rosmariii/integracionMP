@@ -6,7 +6,7 @@ import './Modal.css';
 import TransferForm from './TransferForm';
 import './TransferForm.css';
 
-const ProductList = () => {
+const ProductList = ({ user }) => {
     const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001'; // Default for local dev
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -33,6 +33,10 @@ const ProductList = () => {
 
     // Nuevo flujo: cuando se hace click en comprar, abre el modal para elegir método
     const handleBuy = (product) => {
+        if (!user) {
+            alert('Debes iniciar sesión o crear una cuenta para comprar.');
+            return;
+        }
         setSelectedProduct(product);
         setModalStep('metodo');
         setShowModal(true);
@@ -49,7 +53,7 @@ const ProductList = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ items: [selectedProduct] })
+                body: JSON.stringify({ items: [selectedProduct], user })
             });
             const preference = await response.json();
             if (preference.id) {

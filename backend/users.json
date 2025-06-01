@@ -1,0 +1,30 @@
+[
+  {
+    "username": "Rosmari1231",
+    "password": "$2b$10$cXpGGgcMfiB0zdTWPuuWe.7vDrtylbwBcLeUNj1kv7Rc26xaO0tbm",
+    "email": "rosmarifernandez1231@gmail.com",
+    "nombre": "Rosmari",
+    "apellido": "Fernandez",
+    "direccion": "av diaz velez 4458",
+    "pais": "Argentina",
+    "ciudad": "Buenos Aires",
+    "codigoPostal": "1200",
+    "telefono": "0379154714106",
+    "coords": {
+      "lat": -34.6088597,
+      "lon": -58.4298713
+    }
+  },
+  {
+    "username": "Rosmari2323",
+    "password": "$2b$10$tGHn4Qcu.q.vZ.wqBvEgQeUWFCG3/qily5HNPe4pZYIBgVUee7TfC",
+    "email": "rosmarifernandez@hotmail.com",
+    "nombre": "Rosmari",
+    "apellido": "Fernandez",
+    "direccion": "av diaz velez 4458",
+    "pais": "Argentina",
+    "ciudad": "Buenos Aires",
+    "codigoPostal": "1200",
+    "telefono": "0379154714106"
+  }
+]

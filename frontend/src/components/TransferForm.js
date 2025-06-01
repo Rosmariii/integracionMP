@@ -13,6 +13,7 @@ const datos = {
 const TransferForm = ({ onClose, onComprobanteUpload }) => {
   const [file, setFile] = useState(null);
   const [enviado, setEnviado] = useState(false);
+
   const fileInput = useRef();
 
   const handleFileChange = e => {
@@ -39,9 +40,11 @@ const TransferForm = ({ onClose, onComprobanteUpload }) => {
         <div><b>CUIT:</b> {datos.cuit}</div>
       </div>
       <form onSubmit={handleSubmit} className="form-comprobante">
+
         <label>Subí el comprobante de pago (JPG, PNG o PDF):
           <input type="file" accept="image/*,application/pdf" onChange={handleFileChange} ref={fileInput} required />
         </label>
+
         <button type="submit" className="enviar-btn">Enviar comprobante</button>
       </form>
       {enviado && <div className="mensaje-enviado">¡Comprobante enviado! Pronto confirmaremos tu compra.</div>}
