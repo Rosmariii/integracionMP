@@ -1,0 +1,72 @@
+.transfer-form {
+  background: linear-gradient(135deg, #fffbe6 60%, #ffd6e0 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 320px;
+  max-width: 95vw;
+  text-align: left;
+}
+.transfer-form h2 {
+  color: #e57399;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.datos-banco {
+  background: #fff7f3;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.05em;
+}
+.form-comprobante {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+input[type="file"] {
+  background: #fff;
+  border: 1px solid #ffd6e0;
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.enviar-btn {
+  background: #e57399;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.enviar-btn:hover {
+  background: #b23a48;
+}
+.mensaje-enviado {
+  color: #2ecc71;
+  background: #e8fff0;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.volver-btn {
+  background: none;
+  color: #e57399;
+  border: 1px solid #ffd6e0;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.volver-btn:hover {
+  background: #ffe7ef;
+  color: #b23a48;
+}
