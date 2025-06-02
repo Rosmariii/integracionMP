@@ -58,7 +58,7 @@ function App() {
         <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} onAuthSuccess={handleAuthSuccess} />
         {showHistory && (
           <div className="auth-modal-overlay" style={{zIndex: 9999}}>
-            <div className="auth-modal" style={{minWidth: 370, maxWidth: '95vw', marginTop: 80}}>
+            <div className="auth-modal" style={{minWidth: 370, maxWidth: '50vw', marginTop: 80}}>
               <button className="auth-close" onClick={() => setShowHistory(false)} style={{top: 8, right: 16}}>×</button>
               <OrderHistory user={user} />
             </div>

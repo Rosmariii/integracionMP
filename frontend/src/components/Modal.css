@@ -1,12 +1,26 @@
 .modal-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 192, 203, 0.25); /* rosado pastel translúcido */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .modal-overlay {
+    height: -webkit-fill-available;
+    min-height: 100%;
+  }
 }
 
 @keyframes fadeIn {
@@ -15,19 +29,56 @@
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #fffbe6 60%, #ffd6e0 100%);
-    border-radius: 40px;
-    padding: 3.6rem 2.4rem 2.8rem 2.4rem;
-    min-width: 380px;
-    max-width: 600px;
-    min-height: 180px;
-    box-shadow: 0 12px 48px rgba(229, 115, 153, 0.18);
-    position: relative;
-    animation: popIn 0.4s cubic-bezier(.22,1,.36,1);
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: var(--color-card);
+  border-radius: 20px;
+  padding: 32px;
+  width: 100%;
+  max-width: 600px;
+  min-width: 380px;
+  min-height: 200px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: popIn 0.4s cubic-bezier(.22,1,.36,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-start;
+  }
+  
+  .modal-content {
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+  }
+}
+
+/* Para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .modal-content {
+    margin: 20px;
+    padding: 24px;
+    min-width: auto;
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+/* Ajustes adicionales para pantallas pequeñas */
+@media (max-width: 360px) {
+  .modal-content {
+    padding: 20px 16px;
+  }
 }
 
 @keyframes popIn {
@@ -39,12 +90,34 @@
   position: absolute;
   top: 16px;
   right: 18px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
-  font-size: 2rem;
-  color: #e57399;
+  font-size: 1.8rem;
+  color: var(--color-primary);
   cursor: pointer;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
   z-index: 10;
+  border-radius: 50%;
+  padding: 0;
 }
-.modal-close:hover { color: #b23a48; }
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.6rem;
+  }
+}

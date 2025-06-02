@@ -106,5 +106,35 @@
     "preferenceId": "55077899-2e3a68ba-efc8-4b15-8715-147a7c8c9c1e",
     "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=55077899-2e3a68ba-efc8-4b15-8715-147a7c8c9c1e",
     "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=55077899-2e3a68ba-efc8-4b15-8715-147a7c8c9c1e"
+  },
+  {
+    "timestamp": "2025-06-02T13:58:53.270Z",
+    "user": {
+      "username": "Rosmari1231",
+      "email": "rosmarifernandez1231@gmail.com",
+      "nombre": "Rosmari",
+      "apellido": "Fernandez",
+      "direccion": "av diaz velez 4458",
+      "pais": "Argentina",
+      "ciudad": "Buenos Aires",
+      "codigoPostal": "1200",
+      "telefono": "0379154714106",
+      "coords": {
+        "lat": -34.6088597,
+        "lon": -58.4298713
+      }
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Producto 1",
+        "description": "Desc 1",
+        "price": 1000,
+        "image": "https://via.placeholder.com/150"
+      }
+    ],
+    "preferenceId": "55077899-528c0c93-b604-4389-a384-6ff50682d396",
+    "init_point": "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=55077899-528c0c93-b604-4389-a384-6ff50682d396",
+    "sandbox_init_point": "https://sandbox.mercadopago.com.ar/checkout/v1/redirect?pref_id=55077899-528c0c93-b604-4389-a384-6ff50682d396"
   }
 ]
