@@ -19,6 +19,20 @@
     padding: 0 32px 12px 32px;
     width: 100%;
     max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Solo para móviles */
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .product-card {
+        max-width: 340px;
+        width: 100%;
+    }
 }
 
 
